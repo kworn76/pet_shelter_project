@@ -1,9 +1,10 @@
 {% extends 'pet_vet/base.html' %}
+{% load static %}
 
 {% block content %}
     <div class="row">
 
-        <div class="col-lg-4">
+        <div class="col-lg-4 presentation" >
             <h2>Усы, лапы и хвост</h2>
             <p>крупнейший ветеринарный центр в Казахстане</p>
             <p><strong>233 413+</strong> спасенных жизней за 10 лет работы</p>
@@ -18,9 +19,13 @@
                 <li>Точная диагностика</li>
                 <li>Собственная клинико-диагностическа лаборатория</li>
             </ul>
+            <p>Врачи в ЦВМ работают в условиях диагностической определенности и практикуют новейшие методики лечения
+                повышая эффективность и качество оказываемой помощи.</p>
         </div>
 
-        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+            <img src="{% static 'images/pet_background.jpg' %}" alt="" width="500" height="500">
+        </div>
 
     </div>
 

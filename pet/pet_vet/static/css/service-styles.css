@@ -1,0 +1,11 @@
+.service-cards {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-top: 100px;
+}
+
+.card-title {
+    text-align: center;
+}

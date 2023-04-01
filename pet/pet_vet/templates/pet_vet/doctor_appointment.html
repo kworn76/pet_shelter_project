@@ -1,0 +1,47 @@
+{% extends 'pet_vet/base.html' %}
+
+
+{% block content %}
+<form method="post" action="{% url 'appointment' %}">
+    {% csrf_token %}
+    <table style="margin:auto; width:600px;">
+        <tr>
+            <td><label class="form-label mt-4">Имя</label></td>
+            <td><label class="form-label mt-4">Почта</label></td>
+        </tr>
+        <tr>
+            <td><input type="text" class="form-control" name="client_name" required></td>
+            <td><input type="text" class="form-control" name="client_email" required></td>
+        </tr>
+        <tr>
+            <td><label class="form-label mt-4">Номер телефона</label></td>
+            <td><label class="form-label mt-4">Животное</label></td>
+        </tr>
+        <tr>
+            <td><input type="tel"  name='phone_number' class="form-control" pattern="+7-[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            placeholder="В формате +7-xxx-xxx-xxxx" required></td>
+            <td>
+                <select class="select" style="width:100%" name="pet_type" required>
+
+                </select>
+                {% if sele
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label class="form-label mt-4" >День приёма</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="date" name="date" required>
+            </td>
+        </tr>
+        <tr style="margin-top:auto;">
+            <td>
+                <input type="submit" class="btn btn-primary" value="Записаться" style="margin-top:20px;">
+            </td>
+        </tr>
+    </table>
+</form>
+{% endblock %}

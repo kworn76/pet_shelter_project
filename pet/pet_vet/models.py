@@ -14,8 +14,11 @@ class Appointment(models.Model):
 
 
 class Animals(models.Model):
-    types = models.CharField(max_length=150,verbose_name='Вид')
+    types = models.CharField(max_length=150, verbose_name='Вид')
 
     class Meta:
-        verbose_name='Животное'
+        verbose_name = 'Животное'
         verbose_name_plural = 'Животные'
+
+    def __str__(self):
+        return self.types

@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'pet_shop',
+    'shop',
     'pet_vet',
     'django.contrib.admin',
     'django.contrib.auth',

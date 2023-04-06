@@ -2,7 +2,7 @@
 
 
 {% block content %}
-<form method="post" action="{% url 'appointment' %}">
+<form method="post" action="{% url 'pet_vet_app:appointment' %}">
     {% csrf_token %}
     <table style="margin:auto; width:600px;">
         <tr>
@@ -22,9 +22,12 @@
             placeholder="В формате +7-xxx-xxx-xxxx" required></td>
             <td>
                 <select class="select" style="width:100%" name="pet_type" required>
-
+                    {% for animal in animals %}
+                        <option>{{ animal }}</option>
+                    {% endfor %}
+                    <option value="another">Другое</option>
                 </select>
-                {% if sele
+
             </td>
         </tr>
         <tr>

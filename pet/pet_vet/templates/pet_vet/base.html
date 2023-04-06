@@ -14,32 +14,33 @@
     <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="{% url 'index' %}">Усы, лапы и хвост</a>
+        <a class="navbar-brand" href="{% url 'pet_vet_app:index' %}">Усы, лапы и хвост</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarColor01">
           <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" href="{% url 'index' %}">Главная</a>
+                    <a class="nav-link active" href="{% url 'pet_vet_app:index' %}">Главная</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="{% url 'services' %}">Услуги</a>
+                    <a class="nav-link active" href="{% url 'pet_vet_app:services' %}">Услуги</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="{% url 'appointment' %}">Записаться на приём</a>
+                    <a class="nav-link active" href="{% url 'shop_app:index' %}">Магазин</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'pet_vet_app:appointment' %}">Записаться на приём</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" href="#">Обратный звонок</a>
                 </li>
+
                 <li class="nav-item">
-                    <a class="nav-link active" href="{% url 'shop' %}">Магазин</a>
+                    <a class="nav-link active" href="{% url 'pet_vet_app:contacts' %}">Контакты</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="{% url 'contacts' %}">Контакты</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="{% url 'about' %}">О нас</a>
+                    <a class="nav-link active" href="{% url 'pet_vet_app:about' %}">О нас</a>
                 </li>
 
           </ul>

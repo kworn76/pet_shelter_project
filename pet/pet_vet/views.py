@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponse
-from .models import Appointment
+from .models import Appointment, Animals
 
 
 def index(request):
@@ -21,9 +21,10 @@ def appointment(request):
                            date=date,)
         item.save()
         return render(request, 'pet_vet/doctor_appointment.html')
-
     else:
-        return render(request, 'pet_vet/doctor_appointment.html')
+        animals = Animals.objects.all()
+        context = {'animals': animals}
+        return render(request, 'pet_vet/doctor_appointment.html', context=context)
 
 
 def shop(request):
